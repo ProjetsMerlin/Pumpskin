@@ -1,0 +1,23 @@
+/* CARD */
+.card {
+  margin-top: 24px;
+  min-height: 480px;
+  @extend .noDecoration;
+  @extend .color_dark;
+  @include shadow;
+
+  @include transition;
+
+  &:hover,
+  &:active {
+    margin-top: 18px;
+    @include shadow(0px 0px 8px rgba(0,0,0,.85));
+    @include transition;
+  }
+
+  .subtitle__card {
+    @extend .block;
+    margin-bottom: 12px;
+    opacity: .65;
+  }
+}

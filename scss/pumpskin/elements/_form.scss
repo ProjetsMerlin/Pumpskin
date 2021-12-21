@@ -1,0 +1,37 @@
+/* FORM */
+.input__form {
+  margin-bottom: 24px;
+
+  .input {
+    margin-top: 3px;
+    height: 40px;
+    outline: none;
+  }
+
+  .textarea {
+    margin-top: 3px;
+    height: 190px;
+    outline: none;
+  }
+
+  .input,
+  .textarea {
+    padding: 3px 6px;
+    border: 2px solid $color_primary;
+    @extend .transition;
+
+    &:focus {
+      border: 2px solid $color_dark;
+      @extend .transition;
+    }
+  }
+
+  &::-webkit-input-placeholder {
+    color: grey;
+    @extend .familySans;
+  }
+}
+
+.grecaptcha-badge {
+  opacity:0;
+}

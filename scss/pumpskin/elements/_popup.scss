@@ -1,0 +1,35 @@
+/* PORPUP */
+.popup {
+  @extend .jc_cen;
+  @extend .col;
+  @extend .ai_cen;
+  @extend .color_light;
+
+  &.invisible {
+    @extend .none;
+  }
+
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,.85);
+
+    .fa-close {
+      cursor: pointer;
+    }
+
+  .content_popup {
+    margin: 12px auto;
+    padding: 24px;
+    max-width: 530px;
+    width: 90%;
+    @extend .right;
+
+    .title_popup,
+    .text_popup {
+      margin-bottom: 12px;
+      @extend .left;
+    }
+  }
+}

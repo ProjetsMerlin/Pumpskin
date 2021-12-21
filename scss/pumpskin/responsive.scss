@@ -1,0 +1,103 @@
+/*responsive*/
+
+/* breakpoints */
+$breakpoints: "640","768","1024","1280","1536";
+
+$breakpoints: (
+               "sm": 640px,
+               "md": 768px,
+               "lg": 1024px,
+               "xl": 1280px,
+               "xxl": 1536px,
+               "xxxl": 1920px
+               );
+
+.container {
+  margin: 0px auto;
+  width: 100%;
+}
+
+/* BLOCKS */
+.container_block {
+  padding: 5%;
+}
+
+.container_block-l {
+  padding-left: 5%;
+}
+
+.container_block-r {
+  padding-right: 5%;
+}
+
+.container_block-tb {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.container_block-lr {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.mar_t {
+  margin-top: 48px;
+}
+
+.mar_b {
+  margin-bottom: 48px;
+}
+
+@each $name, $size in $breakpoints {
+  .container--#{$name} {
+    max-width: $size;
+  }
+}
+
+/* sizes */
+$sizes: "0","5","10","15","20","25","30","35","40","45","50","55","60","65","70","75","80","85","90","95","100";
+
+@each $width in $sizes {
+  .w--#{$width} {
+    width: calc(#{$width} * 1%);
+  }
+}
+
+/* font-sizes */
+$font-sizes: (
+              "sm": 8px,
+              "md": 12px,
+              "lg": 16px,
+              "xl": 24px,
+              "xxl": 32px,
+              "xxxl": 48px
+              );
+
+@each $name, $size in $font-sizes {
+  .text--#{$name} {
+    font-size: $size;
+  }
+}
+
+[class*="col--"] {
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: 768px) {
+
+  @each $width in $sizes {
+    .col--#{$width} {
+      flex-basis: calc(#{$width} * 1%);
+    }
+  }
+}
+
+body {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+}

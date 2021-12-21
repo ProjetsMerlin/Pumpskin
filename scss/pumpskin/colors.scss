@@ -1,0 +1,35 @@
+$color_primary: #ededed!default;
+$color_secondary: #dd5c2f!default;
+$color_light: #ffffff!default;
+$color_dark: #000000!default;
+$color_error: #bb1100!default;
+$color_success: #30cc30!default;
+
+$colors: (
+          "primary": $color_primary,
+          "secondary": $color_secondary,
+          "success": $color_success,
+          "error": $color_error,
+          "light": $color_light,
+          "dark": $color_dark
+          );
+
+@each $name, $color in $colors {
+  /* color */
+  .color_#{$name} {
+    color: $color;
+  }
+
+  /* background */
+  .bg_#{$name} {
+    background: $color;
+  }
+}
+
+*::-moz-selection {
+  background-color: $color_secondary;
+}
+
+*::selection {
+  background-color: $color_secondary;
+}
