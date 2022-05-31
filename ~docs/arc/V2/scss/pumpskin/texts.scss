@@ -1,0 +1,214 @@
+/* TEXT */
+body {
+  font-size: 14px;
+}
+
+[class*="text"] {
+  font-size: 14px;
+  line-height: 150%;
+}
+
+/* size */
+$font_size: "1","2","3","4","5","6","7","8","9","10","11","12","13";
+
+@each $fs in $font_size {
+
+  @if $fs == '1' {
+    .fontSize_#{$fs} {
+      font-size: 0.75em;
+      line-height: 1em;
+    }
+  }
+
+  @else if $fs == '2' {
+    .fontSize_#{$fs} {
+      font-size: 0.875em;
+      line-height: 1.25em;
+    }
+  }
+
+  @else if $fs == '3' {
+    .fontSize_#{$fs} {
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+  }
+
+  @else if $fs == '4' {
+    .fontSize_#{$fs} {
+      font-size: 1.125em;
+      line-height: 1.75em;
+    }
+  }
+
+  @else if $fs == '5' {
+    .fontSize_#{$fs} {
+      font-size: 1.25em;
+      line-height: 1.75em;
+    }
+  }
+
+  @else if $fs == '6' {
+    .fontSize_#{$fs} {
+      font-size: 1.5em;
+      line-height: 2em;
+    }
+  }
+
+  @else if $fs == '7' {
+    .fontSize_#{$fs} {
+      font-size: 1.875em;
+      line-height: 2.25em;
+    }
+  }
+
+  @else if $fs == '8' {
+    .fontSize_#{$fs} {
+      font-size: 2.25em;
+      line-height: 2.5em;
+    }
+  }
+
+  @else if $fs == '9' {
+    .fontSize_#{$fs} {
+      font-size: 3em;
+      line-height: 1;
+    }
+  }
+
+  @else if $fs == '10' {
+    .fontSize_#{$fs} {
+      font-size: 3.75em;
+      line-height: 1;
+    }
+  }
+
+  @else if $fs == '11' {
+    .fontSize_#{$fs} {
+      font-size: 4.5em;
+      line-height: 1;
+    }
+  }
+
+  @else if $fs == '12' {
+    .fontSize_#{$fs} {
+      font-size: 6em;
+      line-height: 1;
+    }
+  }
+
+  @else if $fs == '13' {
+    .fontSize_#{$fs} {
+      font-size: 8em;
+      line-height: 1;
+    }
+  }
+
+}
+
+[class*="-lh_0"] {
+  line-height: 0px;
+}
+
+/* transform */
+[class*="-upper"] {
+  text-transform: uppercase;
+}
+
+[class*="-lower"] {
+  text-transform: lowercase;
+}
+
+[class*="-cap"] {
+  text-transform: capitalize;
+}
+
+/* weight */
+[class*="-bold"] {
+  font-weight: bold;
+}
+
+/* decoration */
+[class*="-underline"] {
+  text-decoration: underline;
+}
+
+[class*="-noDecoration"] {
+  text-decoration: none;
+}
+
+/* style */
+[class*="-italic"] {
+  font-style: italic;
+}
+
+[class*="-normal"] {
+  font-style: normal;
+}
+
+/* variant */
+[class*="-smallCaps"] {
+  font-variant: small-caps;
+}
+
+/* family */
+[class*="-familySans"] {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+[class*="-familySerif"] {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+[class*="-familyMono"] {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* align */
+[class*="-align_center"] {
+  text-align: center;
+}
+
+[class*="-align_left"] {
+  text-align: left;
+}
+
+[class*="-align_right"] {
+  text-align: right;
+}
+
+[class*="-align_justify"] {
+  text-align: justify;
+}
+
+@mixin shadow($params) {
+  box-shadow: $params;
+  -webkit-box-shadow: $params;
+  -moz-box-shadow: $params;
+}
+
+%shadow {
+  @include shadow(0px 0px 5px #666);
+}
+
+/* icon */
+@mixin icon($parameters) {
+  width: $parameters;
+  height: $parameters;
+  line-height: $parameters;
+}
+
+[class*="icon-32"] {
+  @include icon(32px);
+  font-size: .8em;
+}
+
+[class*="icon-48"] {
+  @include icon(48px);
+  font-size: .9em;
+}
+
+[class*="icon-64"] {
+  @include icon(64px);
+  font-size: 1em;
+}

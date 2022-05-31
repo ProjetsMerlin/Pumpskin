@@ -1,0 +1,15 @@
+.linter_gallery {
+  @include flex(row,space-around,space-around,flex-start);
+  margin: 48px auto;
+  width: 80%;
+
+  .linter_gallery_img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .linter_gallery_item {
+    width: 33%;
+  }
+}

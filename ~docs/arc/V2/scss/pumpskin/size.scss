@@ -1,0 +1,95 @@
+/* SIZES */
+*,*:after,*:before {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* width */
+$width: "1","2","3","4","5","6","7","8","9","10","11","12";
+
+@each $w in $width {
+  .w_#{$w} {
+      width: calc(100% / #{$w});
+  }
+
+  @media screen and (min-width:440px) {
+    .xs-w_#{$w} {
+      width: calc(100% / #{$w});
+    }
+  }
+
+  @media screen and (min-width:768px) {
+    .md-w_#{$w} {
+      width: calc(100% / #{$w});
+    }
+  }
+
+  @media screen and (min-width:1024px) {
+    .lg-w_#{$w} {
+      width: calc(100% / #{$w});
+    }
+  }
+
+  @media screen and (min-width:1280px) {
+    .xl-w_#{$w} {
+      width: calc(100% / #{$w});
+    }
+  }
+
+  .h_#{$w} {
+    height: calc(100% / #{$w});
+  }
+}
+
+
+.w_full {
+  width: 100%;
+}
+
+.w_screen {
+  width: 100vw;
+}
+
+.w_auto {
+  width: auto;
+}
+
+/*  height */
+.h_full {
+  height: 100%;
+}
+
+.h_screen {
+  height: 100vh;
+}
+
+.h_auto {
+  height: auto;
+}
+
+/*  screens */
+$screens: "320","480","640","768","840","920","1024","1000","1280","1440","1536","1920";
+
+@each $screen in $screens {
+  .container_#{$screen} {
+    max-width: #{$screen}px;
+  }
+}
+
+$size_border: "0","1","2","3","4";
+
+@each $sb in $size_border {
+  .borderSize_#{$sb} {
+    border-width: #{$sb}px;
+    border-style: solid;
+  }
+}
+
+[class*="-border-none"] {
+  border: none;
+}

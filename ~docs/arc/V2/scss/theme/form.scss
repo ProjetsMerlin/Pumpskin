@@ -1,0 +1,45 @@
+/* FORM */
+.input_wrap {
+  @extend .mar-top_18;
+}
+
+@media screen and (min-width: 768px) {
+  .input_wrap {
+    width: 49%;
+  }
+}
+
+.label {
+  @extend [class*="-block"];
+  @extend [class*="-familySans"];
+  @extend .mar-bottom_6;
+}
+
+.input_text {
+  @extend [class*="-block"];
+  @extend .mar-bottom_6;
+  @extend .pad_8;
+  @extend .w_full;
+  height: 40px;
+}
+
+.textarea {
+  height: 180px;
+}
+
+/* messages */
+[class*="_message"] {
+  @extend .pad_24;
+  @extend [class*="text"];
+  @extend [class*="-align_center"];
+}
+
+.success_message {
+  @extend .bg_success;
+  @extend .color_success;
+}
+
+.error_message {
+  @extend .bg_error;
+  @extend .color_error;
+}

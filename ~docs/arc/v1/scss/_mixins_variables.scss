@@ -1,0 +1,60 @@
+/*VARIABLES*/
+$variable: $style;
+$primary_color: #000000;
+$secondary_color: #dedede;
+$degrade_fonce_bas: linear-gradient(164deg, $primary_color 20%, #07141B 80%);
+$transition: all .7s ease;
+$espace: 12px;
+$widths: "10", "20", "25", "33", "40", "50";
+
+/*MIXINS*/
+@mixin transition {
+	-webkit-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+
+@mixin flex($direction:row,$espace:space-around,$alignement:center,$alignement_contenu:center) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+  -webkit-box-pack: $espace;
+  -ms-flex-pack: $espace;
+  justify-content: $espace;
+  -webkit-box-align: $alignement;
+  -ms-flex-align: $alignement;
+  align-items: $alignement;
+  -ms-flex-line-pack: $alignement_contenu;
+  align-content: $alignement_contenu;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@mixin ombre($opacite_ombre) {
+	-webkit-box-shadow: 0px 3px 9px 4px rgba(0,0,0,$opacite_ombre);
+	box-shadow: 0px 3px 9px 4px rgba(0,0,0,$opacite_ombre);
+}
+
+@mixin boutton($couleur:$primary_color,$fond:$secondary_color,$opacite_ombre:0.7) {
+	display: inline-block;
+	width: 260px;
+	height: 60px;
+	color: $couleur;
+	background: $fond;
+
+	text-align: center;
+	border: none;
+	line-height: 60px;
+	@include transition();
+	cursor: pointer;
+
+	&:hover,
+	&:active {
+		color: $fond;
+		background: $couleur;
+	}
+}
