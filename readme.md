@@ -28,15 +28,15 @@ js
 
 style
 -----
-  css : les fichiers compilés
-  + vendor : styles des librairies externes précitées
-    + reset css : afin de mettre à zéro les styles HTML par défaut : -> https://meyerweb.com/eric/tools/css/reset/
+  + css : les fichiers compilés
+    + vendor : styles des librairies externes précitées
+      + reset css : afin de mettre à zéro les styles HTML par défaut : -> https://meyerweb.com/eric/tools/css/reset/
 
-  scss
+  + scss
     + pumpskin : le framework en question et que je divise en trois catégories qui parlent d'elles-mêmes
       + base
       + elements
       + position
-
+    
     + theme
-      + my_theme: c'est ici qu'il est possible de customiser votre propre thème
+        + my_theme: c'est ici qu'il est possible de customiser votre propre thème
