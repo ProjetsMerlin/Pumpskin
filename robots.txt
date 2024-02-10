@@ -1,3 +1,0 @@
-User-Agent: *
-Disallow:
-Sitemap: htts://pumpskin.lintermediaire.be/sitemap.xml
