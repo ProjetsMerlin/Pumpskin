@@ -1,0 +1,119 @@
+.form {
+
+	.form_input {
+		margin-bottom: 18px;
+		padding: 0px 12px;
+
+		label {
+			display: block;
+			margin-bottom: 6px;
+			font-weight: bold;
+		}
+
+		input,
+		select,
+		datalist,
+		textarea {
+			display: block;
+			padding: 7px;
+			width: 100%;
+			height: 48px;
+		}
+
+		textarea {
+			height: 210px;
+		}
+	}
+
+	.checkbox {
+		@include checkboxe(24px,$color_dark,$color_light,$color_light,$color_dark,3px);
+
+		[type="radio"] ~ label,
+		[type="checkbox"] ~ label {
+			display: inline-block;
+			font-weight: normal;
+			font-size: 1em;
+			opacity: .85;
+		}
+
+		[type="radio"]:checked ~ label,
+		[type="checkbox"]:checked ~ label{
+			color: $color_dark;
+			opacity: 1;
+		}
+
+		[type="radio"] {
+			border-radius: 50%;
+		}
+	}
+
+	/*FILE*/
+	[type="file"] {
+		position: absolute;
+		left: -1000vw;
+	}
+
+	[for="file"] {
+
+		&::after {
+			content: "Your Content Here";
+			display: block;
+			margin-top: 6px;
+			width: 100%;
+			height: 50px;
+
+			text-align: center;
+			line-height: 50px;
+			border: 1px dashed grey;
+			opacity: .3;
+			cursor: pointer;
+		}
+	}
+
+	/* RANGE */
+	[type="range"] {
+		-webkit-appearance: none;
+		background-color: #fafafa;
+		max-height: 2px;
+
+		&::-webkit-slider-runnable-track {
+			-webkit-appearance: none;
+			margin-top: -1px;
+			height: 10px;
+			background-color: $color_primary;
+		}
+
+		&::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			margin-top: -6px;
+			width: 24px;
+			height: 24px;
+			cursor: ew-resize;
+			background: $color_secondary;
+			border-radius: 50%;
+		}
+
+	}
+
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"] {
+		@extend .btn;
+	}
+}
+
+/*
+output
+fieldset
+legend
+optgroup
+
+[type="date"] & [type="datetime-local"]
+[type="month"]
+[type="week"]
+[type="time"]
+
+[type="color"]
+[type="image"]
+*/

@@ -1,0 +1,177 @@
+body {
+  font-size: 14px;
+  font-family: $font_text;
+
+  @media screen and (min-width: 640px) {
+    font-size: 16px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  display: block;
+  font-family: $font_title;
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+}
+
+h5 {
+  display: inline-block;
+  text-transform: uppercase;  
+}
+
+h6 {
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+$titles: 1,2,3,4,5,6;
+@each $size in $titles {
+  h#{$size} {
+    font-size: calc( calc(10 - #{$size}) * 0.3em );
+    line-height: calc( calc(10 - #{$size}) * 0.15em );
+  }
+}
+
+p,
+Blockquote {
+  font-size: 1em;
+  line-height: 150%;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+sup,
+sub {
+  position: relative;
+  top: -0.4em;
+  vertical-align: baseline;
+}
+
+sub { 
+  top: 0.4em; 
+}
+
+ul,
+ol {
+  padding-left: 16px;  
+  line-height: 150%;
+
+  li {
+    margin-left: 16px;
+    list-style: circle;
+  }
+}
+
+ol li {
+  list-style: none;
+  counter-increment: my-counter;
+
+  &::before {
+    content: counter(my-counter);
+    position: absolute;
+    left: calc(19px * 1.9);
+  }
+}
+
+hr {
+  margin: $taille 0px;
+  height: 1px;
+  background: #dedede;
+  border: none;
+}
+
+blockquote,
+pre {
+  margin-left: 16px;
+  padding: 7px;
+  background: #dedede;
+  border: 0px solid grey;
+  border-left-width: 6px;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+
+  th {
+    text-align: center;
+    border: 1px solid white;
+  }
+
+
+  td {
+    padding: 0 calc(#{$taille} / 2);
+    border: 1px solid white;
+  }
+
+  tr {
+    height: 40px;
+    line-height: 40px;
+
+    &:nth-of-type(even) {
+      background: $color_thirdy;
+    }
+  }
+}
+
+/* transform */
+.normal {
+  text-transform: normal;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.lower {
+  text-transform: lowercase;
+}
+
+.cap {
+  text-transform: capitalize;
+}
+
+/* decoration */
+.under {
+  text-decoration: underline;
+}
+
+.noDecoration {
+  text-decoration: none;
+}
+
+/* weight */
+.bold {
+  font-weight: bold;
+}
+
+/* style */
+.italic {
+  font-style: italic;
+}
+
+/* variant */
+.smallCaps {
+  font-variant: small-caps;
+}
+
+/* exposaants */
+.sup {
+  vertical-align: top;
+  font-size: 70%;
+}
+
+.sub {
+  vertical-align: baseline;
+  font-size: 70%;
+}

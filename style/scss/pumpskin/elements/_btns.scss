@@ -1,0 +1,53 @@
+.link {
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+    opacity: .8;
+  }
+}
+
+.btn {
+  @include button($color_primary,$color_light);
+  padding: 0px 16px;
+  height: 48px;
+  font-size: 16px;
+  line-height: 48px;
+
+  &--big {
+    padding: 0 24px;
+    height: 60px;
+    font-size: 24px;
+    line-height: 60px;
+  }
+
+  &--small {
+    padding: 0 12px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+  }
+
+  &--secondary {
+    @include button($color_secondary,$color_light);
+  }
+
+  &--warning {
+    @include button($color_warning,$color_light);
+    border-radius: 15px;
+  }
+
+  &--success {
+    @include button($color_success,$color_dark);
+  }
+
+  &--error {
+    @include button($color_error,$color_dark);
+  }
+
+  &--light {
+    @include button($color_light,$color_dark);
+    border: 1px solid $color_dark;
+  }
+}

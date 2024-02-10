@@ -1,0 +1,29 @@
+$popupColorBackground: rgba(0,0,0,.85);
+$popupContentBackground: $color_light;
+
+.popup {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: $popupColorBackground;
+
+  &--cookies {
+    background: transparent;
+    pointer-events: none;
+  }
+}
+
+.popup_container {
+  margin: $taille auto;
+  padding: $taille;
+  max-width: 768px;
+  background: $popupContentBackground;
+  pointer-events: auto;
+
+  .popup--cookies & {
+    margin: 12px 24px;
+    background: $color_primary;
+  }
+}

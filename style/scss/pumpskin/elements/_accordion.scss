@@ -1,0 +1,53 @@
+.accordion {
+	$accordionWidth: 0px;
+	$accordionColorPrimary: $color_light;
+	$accordionColorSecondary: $color_dark;
+
+	details {
+		line-height: 150%;
+		border: $accordionWidth solid $accordionColorPrimary;
+		border-bottom-width: 0px;
+		cursor: pointer;
+
+		&:last-of-type {
+			border: $accordionWidth solid $accordionColorPrimary;
+		}
+
+		&[open] summary,
+		&:hover summary,
+		&:active summary {
+			color: $accordionColorPrimary;
+			background: $accordionColorSecondary;
+		}
+
+		&[open] summary::after {
+			content: "-";
+		}
+	}
+
+	summary {
+		position: relative;
+		padding: 12px 24px;
+		color: $accordionColorSecondary;
+		background: $accordionColorPrimary;
+		font-weight: bold;
+		font-family: sans-serif;
+
+		&::after {
+			content: "+";
+			position: absolute;
+			top: calc( 50% - 1em);
+			right: 18px;
+			transform: scale(1.2)
+		}
+
+		&::marker {
+			font-size: 0;
+		}
+	}
+
+	details p {
+		padding: 12px 24px 36px;
+		color: $accordionColorSecondary;
+	}
+}

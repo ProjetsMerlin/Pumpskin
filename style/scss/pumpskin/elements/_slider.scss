@@ -1,0 +1,76 @@
+.slick-dots li button,
+.slick-arrow {
+	z-index: 99;
+
+	position: absolute;
+	top: calc(50% - calc(36px * 4));
+	left: 24px;
+	width: 36px;
+	height: 36px;
+
+	background: $color_primary;
+	font-size: 0;
+	border: 1px solid $color-light;
+	border-radius: 50%;
+	cursor: pointer;
+
+	&:hover,
+	&:active {
+		opacity: .7;
+	}
+
+	&::after {
+		z-index: 101;
+		content: "❮";
+
+		position: absolute;
+		top: 0px;
+		left: 9px;
+		width: 18px;
+
+		color: $color_light;
+		line-height: 36px;
+		font-size: 16px;
+
+	}
+
+	&.slick-next {
+		left: calc(100% - calc(36px * 2));
+
+		&::after {
+			content: "❯";
+		}
+	}
+}
+
+.slick-dots {
+	margin-top: $taille;
+	padding-left: 0px;
+	text-align: center;
+
+	li {
+		display: inline;
+		margin: 6px;
+		list-style: none;
+
+		&:hover button,
+		&:active button,
+		&.slick-active button {
+			background: $color_light;
+			color: $color_primary;
+			border: 1px solid $color_primary;
+		}
+
+		button {
+			position: relative;
+			left: 0px;
+			display: inline-block;
+			color: $color_light;
+			font-size: 1em;
+
+			&:after {
+				content: "";
+			}
+		}
+	}
+}

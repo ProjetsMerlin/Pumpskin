@@ -1,0 +1,70 @@
+$font_title: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+$font_text: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$taille: 24px!default;
+
+$color_primary: orange!default;
+$color_secondary: #455d7a!default;
+$color_light: #ffffff!default;
+$color_dark: #000000!default;
+$color_error: pink!default;
+$color_success: #8bc34f!default;
+$color_warning: red!default;
+$color_thirdy: #ededed!default;
+
+$colors: (
+"primary": $color_primary,
+"secondary": $color_secondary,
+"thirdy": $color_thirdy,
+"warning": $color_warning,
+"success": $color_success,
+"error": $color_error,
+"light": $color_light,
+"dark": $color_dark
+);
+
+@each $slug, $color in $colors {
+  /* color */
+  .color_#{$slug} {
+    color: $color;
+  }
+  
+  /* background */
+  .bg_#{$slug} {
+    background: $color;
+  }
+}
+
+/* breakpoints */
+$breakpoints: (
+"xsss": 300px,
+"xss": 420px,
+"xs": 530px,
+"sm": 640px,
+"md": 768px,
+"m" : 860px,
+"lg": 1024px,
+"x": 1280px,
+"xl": 1140px,
+"xxl": 1536px,
+"xxxl": 1920px
+);
+
+/* font-sizes */
+$sizes: "0","5","10","15","20","25","30","33","35","40","45","50","55","60","65","70","75","80","85","90","95","100";
+
+$font-sizes: (
+"sm": .7em,
+"md": 1em,
+"lg": 1.4em,
+"xl": 2em,
+"xxl": 2.4em,
+"xxxl": 2.8em
+);
+
+@each $name, $size in $font-sizes {
+  /* color */
+  .text--#{$name} {
+    font-size: $size;
+  }
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pumpskin</title>
+	<link rel="stylesheet" href="style/css/vendor/print.min.css" media="print" />
+	<link rel="stylesheet" href="style/css/style.css" />
+</head>
+<body>
+	<header class="header bg_primary flx">
+		<a class="noDecoration color_light pl logo" href="/">
+			<h3>
+				Logo - Contact
+			</h3>
+		</a>
+		<a arria-hidden="true" title="open menu" href="#" class="dekstop_none menuBurger js_toggleMenu">
+			<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+				<path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+			</svg>
+		</a>
+		<a arria-hidden="true" title="close menu" href="#" class="color_light menuBurgerClose js_toggleMenu">
+			<span class="icon icon--close"></span>
+		</a>
+		<menu class="menu flx-end">
+			<a class="noDecoration mr upper color_light" href="index.html">Home</a>
+			<a class="noDecoration mr upper color_light" href="historique.html">Historique</a>
+			<a class="noDecoration mr upper color_light" href="services.html">Services</a>
+			<a class="noDecoration mr upper color_light" href="blog.html">Blog</a>
+			<a class="noDecoration mr upper color_light link_actif" href="contact.html">Contact</a>
+		</menu>
+	</header>
+
+	<section>
+		<div class="mt--middle container container--md">
+			<div class="center mb">
+				<h2 class="upper mb">Formulaire</h2>
+			</div>
+			<form class="form" action="#" method="post">
+				<div class="flx">
+					<div class="form_input w--50">
+						<label for="email">Label email</label>
+						<input name="email" id="email" type="email" />
+					</div>
+
+					<div class="form_input w--50">
+						<label for="number">Label number</label>
+						<input name="number" id="number" type="number" />
+					</div>
+
+					<div class="form_input w--50">
+						<label for="password">Label password</label>
+						<input name="password" id="password" type="password" />
+					</div>
+
+					<div class="form_input w--50">
+						<label for="search">Label search</label>
+						<input name="search" id="search" type="search" />
+					</div>
+
+					<div class="form_input w--50">
+						<label for="tel">Label tel</label>
+						<input id="tel" name="tel" type="tel" />
+					</div>
+
+					<div class="form_input w--50">
+						<label for="url">Label url</label>
+						<input name="url" id="url" type="url" />
+					</div>
+
+					<div class="form_input w--50 checkbox">
+						<input name="checkbox" id="checkbox" type="checkbox" />
+						<label for="checkbox">Label checkbox</label>
+					</div>
+					<div class="form_input w--50 checkbox">
+						<input name="radio" id="radio" type="radio" />
+						<label for="radio">Label radio</label>
+					</div>
+
+					<div class="form_input w--50">
+						<label for="file">Label file</label>
+						<input name="file" id="file" type="file" />
+					</div>
+
+					<div class="form_input w--50">
+						<label for="range">Label range</label>
+						<input name="range" id="range" type="range" />
+					</div>
+				</div>
+				<div class="form_input w--100">
+					<label for="textarea">Label textarea</label>
+					<textarea name="textarea" id="textarea"></textarea>
+				</div>
+				<div class="center">
+					<div aria-hiiden="true" class="loader"></div>
+				</div>
+				<div class="center mt mb w--100">
+					<button class="btn mb">
+						<span>Envoyer</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</section>
+	
+	<section>
+		<div id="map"></div>
+	</section>
+
+	<footer class="mt--middle pad bg_secondary">
+		<div class="flx-around">
+			<p class="">
+				<h4 class="color_light">
+					Footer title
+				</h4>
+			</p>
+			<p class="pad color_light w--40">
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error eius vel reiciendis incidunt commodi sapiente nisi nulla voluptatibus rerum dolore quasi est nihil tempore necessitatibus corrupti, vitae! Ipsum nihil, blanditiis.
+			</p>
+		</div>
+		<div class="center pad">
+			<nav>
+				<a class="inlineBlock noDecoration bg_primary color_light ml mr" href="#" target="_blank" title="facebook">
+					<svg width="16px" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><
+						<path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/>
+					</svg>
+				</a>
+				<a class="noDecoration color_light ml mr" href="#" target="_blank" title="linkedi">
+					<span class="icon icon--linkedin"></span>
+				</a>
+				<a class="noDecoration color_light ml mr" href="#" target="_blank" title="behance">
+					<span class="icon icon--behance"></span>
+				</a>
+			</nav>
+		</div>
+	</footer>
+
+	<modal class="popup flx invisible" data-popup="popup_one">
+		<div class="popup_container">
+			<div class="right">
+				<a href="#" class="js_closePopup" data-popup="popup_one">
+					<span class="icon icon--close"></span>
+				</a>
+			</div>
+			<h2 class="mb">Titre</h2>
+			<p class="mb">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio nobis quae exercitationem molestias distinctio corrupti illum dolor quia, natus voluptatibus rerum cum suscipit ullam obcaecati dignissimos. Eos, recusandae? Quibusdam, sunt?
+			</p>
+			<a class="btn btn--primary" href="#">cta 1</a>
+			<a class="btn btn--light" href="#">cta 2</a>
+		</div>
+	</modal>
+
+	<modal class="popup popup--cookies invisible flx-end-c_end" data-popup="popup_cookies">
+		<div class="popup_container">
+			<div class="right">
+				<a href="#" class="js_closePopup" data-popup="popup_cookies">
+					<span class="icon icon--close"></span>
+				</a>
+			</div>
+			<h2 class="mb">Titre</h2>
+			<p class="mb">
+				Lorem ipsum dolor sit, amet consectetur adipisicinndae? Quibusdam, sunt?
+			</p>
+			<a class="btn btn--secondary" href="#">cta 1</a>
+			<a class="btn btn--light" href="#">cta 2</a>
+		</div>
+	</modal>
+
+	<script src="js/map.js"></script>
+
+	<script src="js/vendor/jQuery.js"></script>
+
+	<script src="js/vendor/slick.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+</body>
+</html>

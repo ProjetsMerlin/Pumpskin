@@ -1,0 +1,150 @@
+/*responsive*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  margin: 0px auto;
+  width: 100%;
+}
+
+.container--m0 {
+  margin: 0px;
+}
+
+.mt {
+  margin-top: $taille;
+}
+
+.mt--middle {
+  margin-top: calc(2 * #{$taille});
+
+  @media screen and (min-width: 768px) {
+    margin-top: calc(5 * #{$taille});
+  }
+}
+
+.mt--big {
+  margin-top: calc(3 * #{$taille});
+
+  @media screen and (min-width: 768px) {
+    margin-top: calc(10 * #{$taille});
+  }
+}
+
+.mb {
+  margin-bottom: $taille;
+}
+
+.ml {
+  margin-left: $taille;
+}
+
+.mr_negative {
+  margin-right: -12px;
+}
+
+.mr {
+  margin-right: $taille;
+}
+
+.m-full {
+  margin: calc(#{$taille} / 2);
+}
+
+/* PADDING  */
+.pad {
+  padding: $taille;
+}
+
+.pt {
+  padding-top: 24px;
+}
+
+.pl {
+  padding-left: 24px;
+}
+
+.pb {
+  padding-bottom: 24px;
+}
+
+.pr {
+  padding-right: 24px;
+}
+
+.pl-0 {
+  padding-left: 0px;
+  a {
+    padding-left: 0px;
+  }
+}
+
+@each $name, $size in $breakpoints {
+  .container--#{$name} {
+    @extend .container;
+    max-width: $size;
+  }
+}
+
+@each $width in $sizes {
+  .w--#{$width} {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    .w--#{$width} {
+      width: calc(#{$width} * 1%);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  @each $width in $sizes {
+    .col--#{$width} {
+      flex-basis: calc(#{$width} * 1%);
+    }
+  }
+}
+
+.tablet_none {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+
+    table & {
+      display: table-cell;
+    }
+  }
+}
+
+.dekstop_none  {
+  display: inline-block;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.h_25 {
+  min-height: 25vh;
+}
+
+.h_50 {
+  min-height: 50vh;
+}
+
+.h_75 {
+  min-height: 75vh;
+}
+
+.h_100 {
+  min-height: 100vh;
+}

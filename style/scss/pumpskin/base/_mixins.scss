@@ -1,0 +1,151 @@
+@mixin button($color_first: black, $color_second: white) {
+  display: inline-block;
+  background: $color_first;
+  color: $color_second;
+  border: 1px solid $color_first;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    background: $color_second;
+    color: $color_first;
+    border: 1px solid $color_first;
+    cursor: pointer;
+  }
+}
+
+/* CUSTOM SCROLLBAR */
+@mixin scroller ($color_bg, $color_bar, $color_hover, $width) {
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $color_bg;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $color_bar;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $color_hover;
+  }
+
+  scrollbar-color: $color_bar $color_bg;
+}
+
+/* BACKGROUND  */
+@mixin bg($bg_color:transparent, $size:cover, $repeat:no-repeat, $position:center center) {
+  background-color: $bg_color;
+  background-size: $size;
+  background-repeat: $repeat;
+  background-position: $position;
+}
+
+.bg {
+  @include bg();
+  
+  &.bg--auto {
+    background-size: 100% auto;
+  }
+  
+  &.bg--contain {
+    background-size: contain;
+  }
+  
+  &.bg--top {
+    background-position: top center;
+  }
+  
+  &.bg--special {
+    background-size: 0 0;
+    
+    @media screen and (min-width: 1140px) {
+      background-size: auto 100%;
+    }
+  }
+}
+
+/* TRANSITION */
+@mixin transition($property:all, $duration:.7s, $timing:ease, $delay:0s) {
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $timing;
+  transition-delay: $delay;
+}
+
+.transition {
+  @include transition();
+}
+
+/* OMBRE */
+@mixin shadow($params:0px 0px 3px #666) {
+  box-shadow: $params;
+  -webkit-box-shadow: $params;
+  -moz-box-shadow: $params;
+}
+
+.shadow {
+  @include shadow();
+}
+
+@mixin checkboxe($taille: 24px, $color_primary: grey, $color_secondary: #dedede, $color_thirdy: red, $color_four: pink, $borderWidth: 3px) {
+    input {
+      position: relative;
+      margin: 0;
+      -moz-appearance: none;
+           appearance: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+
+      display: inline-block;
+      margin-right: 8px;
+      width: $taille;
+      height: $taille;
+      background: $color_secondary;
+
+      vertical-align: middle;
+      border: $borderWidth solid $color_primary;
+    }
+
+    input + label {
+      color: $color_primary;
+      font-size: $taille;
+      line-height: calc(#{$taille} * 1.2);
+      vertical-align: middle;
+      cursor: pointer;
+    }
+
+    input::before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      top: calc(50% - calc(#{$taille} / 4));
+      left: calc(50% - calc(#{$taille} / 4));
+      width: calc(#{$taille} / 2);
+      height: calc(#{$taille} / 4);
+
+      border: 0px solid $color_thirdy;
+      border-bottom-width: $borderWidth;
+      border-left-width: $borderWidth;
+      transform: rotate(-45deg);
+      transform-origin: center center;
+
+      opacity: 0;
+      transition: all .3s ease;
+    }
+
+    input:checked {
+      background: $color_four;
+      border: $borderWidth solid $color_thirdy;
+    }
+
+    input:checked + label {
+      color: $color_thirdy;
+    }
+
+    input:checked::before {
+      opacity: 1;
+    }
+}

@@ -1,0 +1,77 @@
+
+$display : ('flx-i':inline-flex);
+
+$flex-wrap : (
+  'wrap': wrap,
+  'wrap_r': wrap-reverse);
+
+$flex-direction : (
+  'row_r': row-reverse,
+  'col': column,
+  'col_r': column-reverse,
+  );
+
+$justify-content : (
+  'start': flex-start,
+  'end': flex-end,
+  'center': center,
+  'around': space-around,
+  'evenly': space-evenly);
+
+$align-items : (
+  'i_start': flex-start,
+  'i_end': flex-end,
+  'i_baseline': baseline,
+  'i_stretch': stretch);
+
+$align-content : (
+  'c_start': flex-start,
+  'c_end': flex-end,
+  'c_between': space-between,
+  'c_around': space-around,
+  'c_stretch': stretch);
+
+$align-self : (
+  's_start': flex-start,
+  's_end': flex-end,
+  's_center': center,
+  's_baseline': baseline,
+  's_stretch': stretch);
+
+[class*="flx"] {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  >* {
+    align-self: auto;
+  }
+
+}
+
+.flexResponsive {
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+$propreties : (
+  "display": $display,
+  "flex-wrap": $flex-wrap,
+  "flex-direction": $flex-direction,
+  "justify-content": $justify-content,
+  "align-items": $align-items,
+  "align-content": $align-content,
+  "align-self": $align-self);
+
+@each $key, $val in $propreties {
+  @each $name, $value in $val {
+    [class*="-#{$name}"]	{
+      #{$key}: $value;
+    }
+  }
+}

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pumpskin</title>
+	<link rel="stylesheet" href="style/css/vendor/print.min.css" media="print" />
+	<link rel="stylesheet" href="style/css/style.css" />
+
+	<link rel="stylesheet" href="style/css/vendor/slick.min.css" />
+	<link rel="stylesheet" href="style/css/vendor/BeerSlider.min.css" />
+	<link rel="stylesheet" href="style/css/vendor/YTPlayerStyle.min.css" />
+
+</head>
+<body>
+	<div class="progess_bar"></div>
+	<header class="header bg_primary flx">
+		<a class="noDecoration color_light pl logo" href="/">
+			<h3>
+				Logo - Home
+			</h3>
+		</a>
+		<a arria-hidden="true" title="open menu" href="#" class="dekstop_none menuBurger js_toggleMenu">
+			<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+				<path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+			</svg>
+		</a>
+		<a arria-hidden="true" title="close menu" href="#" class="color_light menuBurgerClose js_toggleMenu">
+			<span class="icon icon--close"></span>
+		</a>
+		<menu class="menu flx-end">
+			<a class="noDecoration mr upper color_light link_actif" href="index.html">Home</a>
+			<a class="noDecoration mr upper color_light" href="historique.html">Historique</a>
+			<a class="noDecoration mr upper color_light" href="services.html">Services</a>
+			<a class="noDecoration mr upper color_light" href="blog.html">Blog</a>
+			<a class="noDecoration mr upper color_light" href="contact.html">Contact</a>
+		</menu>
+	</header>
+
+	<section class="bg_thirdy">
+		<div class="container container--sm h_75 flx-col-center pad">
+			<h2 class="mb">Text Center</h2>
+			<p class="center mb">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates laudantium et cum alias quae quia explicabo nesciunt impedit dignissimos, aliquam itaque adipisci nostrum soluta consequuntur natus nulla ut sint facilis.
+			</p>
+			<a href="#" class="mt btn js_openPopup" data-popup="popup_one">Button</a>
+		</div>
+	</section>
+
+	<section>
+		<div class="h_50 flx-col-center pad">
+			<h3 class="mb">
+				Buttons
+			</h3>
+			<div class="container container--sm flx-between flexResponsive">
+				<a href="#" class="mb btn">Primary Button</a>
+				<a href="#" class="mb btn btn--secondary">Secondary Button</a>
+				<a href="#" class="mb btn btn--success btn--big bold">Success big bold button</a>
+				<a href="#" class="mb btn btn--error upper">warning upper small</a>
+				<a href="#" class="mb btn btn--warning btn--small upper">warning upper small</a>
+				<a href="#" class="mb btn btn--warning btn--small upper">warning upper small</a>
+				<a href="#" class="mb btn btn--light">
+					<span>Simple Light Button</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg_primary pad">
+		<div class="container container--xl flx-between mt--middle mb">
+			<div class="w--50 pad ">
+				<img class="w--100" src="img/image_03_300x300.jpg" alt="Pumpskin" title="Pumpskin" />
+			</div>
+			<div class="w--45 pad color_light">
+				<h2 class="mb color_seconndary">Ceci est un titre</h2>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi consectetur quis possimus at, nisi quibusdam culpa! Aperiam velit animi, esse exercitationem, nobis, a sint, illo tenetur tempore consequuntur vero officiis.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg_light pad">
+		<div class="container container--xl flx-between-row_reverse mt mb">
+			<div class="w--50 pad ">
+				<img class="w--100" src="img/image_03_300x300.jpg" alt="Pumpskin" title="Pumpskin" />
+			</div>
+			<div class="w--45 pad color_primart">
+				<h3 class="mb color_seconndary">Ceci est un titre</h3>
+				<p>
+					<strong class="inlineBlock">Stong balise <em>em balise</em></strong>
+					An this in in a aragraf balise.<br> And this an exemple of <sub>sub</sub> and this is an exemple of <sup>sup</sup>
+					Lorem ipsum dolor <span class="color_primary">class: color_primary</span> amet consectetur adipisicing elit. Commodi consectetur quis possimus at, nisi quibusdam culpa! Aperiam velit animi, esse exercitationem, nobis, a sint, illo tenetur tempore consequuntur vero officiis.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg_success">
+		<div class="flx-between-row_reverse">
+			<div class="w--50">
+				<div id="beer-slider" class="beer-slider w--100" data-beer-label="" data-beer-start="50">
+					<img class="w--100" src="img/image_02_300x200.jpg" title="" alt="">
+					<div class="beer-reveal" data-beer-label="">
+						<img class="w--100 black-and-white" src="img/image_02_300x200.jpg">
+					</div>
+				</div>
+			</div>
+			<div class="w--40 pad color_light">
+				<h3 class="mb">Ceci est un titre</h3>
+				<p class="">
+					<strong class="inlineBlock">Stong balise <em>em balise</em></strong>
+					An this in in a aragraf balise.<br> And this an exemple of <sub>sub</sub> and this is an exemple of <sup>sup</sup>
+					Lorem ipsum dolor <span class="under color_secondary">class: color_secondaru under</span> amet consectetur adipisicing elit. Commodi consectetur quis possimus at, nisi quibusdam culpa! <a href="#" class="color_secondary link">Aperiam velit animi lik</a>, esse exercitationem, nobis, a sint, illo tenetur tempore consequuntur vero officiis.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg_success">
+		<div class="flx-between">
+			<div class="w--50">
+				<div id="bgndVideo" class="player" data-property="{videoURL:'https://youtu.be/K0GxmnFdjfE'}"></div>
+			</div>
+			<div class="w--40 mr pad color_light">
+				<h3 class="mt mb">Ceci est un titre</h3>
+				<p>
+					<strong class="inlineBlock">Stong balise <em>em balise</em></strong>
+					An this in in a aragraf balise.<br> And this an exemple of <sub>sub</sub> and this is an exemple of <sup>sup</sup>
+					Lorem ipsum dolor <span class="under color_secondary">class: color_secondaru under</span> amet consectetur adipisicing elit. Commodi consectetur quis possimus at, nisi quibusdam culpa! <a href="#" class="color_secondary link">Aperiam velit animi lik</a>, esse exercitationem, nobis, a sint, illo tenetur tempore consequuntur vero officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum eveniet officiis obcaecati, saepe quisquam excepturi, nam fugiat amet dolore iste. Quidem veniam, quia ut rerum nobis non voluptatum, aperiam sunt! ; Lorem ipsum...
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="mt--middle center mb pad">
+			<h2 class="upper">Blog</h2>
+		</div>
+		<div class="container container--xxl flx-center-wrap mb">
+			<a href="article.html" class="w--25 color_dark noDecoration m-full card bg_thirdy shadow">
+				<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+				<div class="pad">
+					<h4 class="mb">Ceci est un titre</h4>
+					<p class="mb">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+					</p>
+					<span class="btn">
+						En savoir plus
+					</span>
+				</div>
+			</a>
+
+			<a href="article.html" class="w--25 color_dark noDecoration m-full card bg_thirdy shadow">
+				<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+				<div class="pad">
+					<h4 class="mb">Ceci est un titre</h4>
+					<p class="mb">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+					</p>
+					<span class="btn">
+						En savoir plus
+					</span>
+				</div>
+			</a>
+
+			<a href="article.html" class="w--25 color_dark noDecoration m-full card bg_thirdy shadow">
+				<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+				<div class="pad">
+					<h4 class="mb">Ceci est un titre</h4>
+					<p class="mb">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+					</p>
+					<span class="btn">
+						En savoir plus
+					</span>
+				</div>
+			</a>
+
+			<a href="article.html" class="w--25 color_dark noDecoration m-full card bg_thirdy shadow">
+				<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+				<div class="pad">
+					<h4 class="mb">Ceci est un titre</h4>
+					<p class="mb">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+					</p>
+					<span class="btn">
+						En savoir plus
+					</span>
+				</div>
+			</a>
+
+			<a href="article.html" class="w--25 color_dark noDecoration m-full card bg_thirdy shadow">
+				<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+				<div class="pad">
+					<h4 class="mb">Ceci est un titre</h4>
+					<p class="mb">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+					</p>
+					<span class="btn">
+						En savoir plus
+					</span>
+				</div>
+			</a>
+
+			<a href="article.html" class="w--25 color_dark noDecoration m-full card bg_thirdy shadow">
+				<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+				<div class="pad">
+					<h4 class="mb">Ceci est un titre</h4>
+					<p class="mb">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+					</p>
+					<span class="btn">
+						En savoir plus
+					</span>
+				</div>
+			</a>
+
+			<a href="article.html" class="w--25 color_dark noDecoration m-full card bg_thirdy shadow">
+				<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+				<div class="pad">
+					<h4 class="mb">Ceci est un titre</h4>
+					<p class="mb">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+					</p>
+					<span class="btn">
+						En savoir plus
+					</span>
+				</div>
+			</a>
+
+			<a href="article.html" class="w--25 color_dark noDecoration m-full card bg_thirdy shadow">
+				<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+				<div class="pad">
+					<h4 class="mb">Ceci est un titre</h4>
+					<p class="mb">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+					</p>
+					<span class="btn">
+						En savoir plus
+					</span>
+				</div>
+			</a>
+
+		</div>
+	</section>
+
+	<section>
+		<div class="container container--md">
+			<div class="mt--middle mb center">
+				<h4>Example Table</h4>
+			</div>
+
+			<table class="mb">
+				<thead class="bg_dark color_light">
+					<tr>
+						<th>Titre A</th>
+						<th>Titre B</th>
+						<th>Titre C</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>132654</td>
+						<td>132654</td>
+						<td>132654</td>
+					</tr>
+					<tr>
+						<td>132654</td>
+						<td>132654</td>
+						<td>132654</td>
+					</tr>
+					<tr>
+						<td>132654</td>
+						<td>132654</td>
+						<td>132654</td>
+					</tr>
+					<tr>
+						<td>132654</td>
+						<td>132654</td>
+						<td>132654</td>
+					</tr>
+					<tr>
+						<td>132654</td>
+						<td>132654</td>
+						<td>132654</td>
+					</tr>
+					<tr>
+						<td>132654</td>
+						<td>132654</td>
+						<td>132654</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</section>
+
+	<section>
+		<div class="mt--middle center mb pad">
+			<h2 class="upper">Slider</h2>
+		</div>
+		<div class="container container--xxl mb">
+			<div class="slider mb">
+				<div class="color_dark noDecoration m-full card bg_thirdy shadow">
+					<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+					<div class="pad">
+						<h4 class="mb">Ceci est un titre</h4>
+						<p class="mb">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+						</p>
+						<span class="btn">
+							En savoir plus
+						</span>
+					</div>
+				</div>
+
+				<div class="color_dark noDecoration m-full card bg_thirdy shadow">
+					<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+					<div class="pad">
+						<h4 class="mb">Ceci est un titre</h4>
+						<p class="mb">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+						</p>
+						<span class="btn">
+							En savoir plus
+						</span>
+					</div>
+				</div>
+
+				<div class="color_dark noDecoration m-full card bg_thirdy shadow">
+					<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+					<div class="pad">
+						<h4 class="mb">Ceci est un titre</h4>
+						<p class="mb">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+						</p>
+						<span class="btn">
+							En savoir plus
+						</span>
+					</div>
+				</div>
+
+				<div class="color_dark noDecoration m-full card bg_thirdy shadow">
+					<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+					<div class="pad">
+						<h4 class="mb">Ceci est un titre</h4>
+						<p class="mb">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+						</p>
+						<span class="btn">
+							En savoir plus
+						</span>
+					</div>
+				</div>
+
+				<div class="color_dark noDecoration m-full card bg_thirdy shadow">
+					<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+					<div class="pad">
+						<h4 class="mb">Ceci est un titre</h4>
+						<p class="mb">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+						</p>
+						<span class="btn">
+							En savoir plus
+						</span>
+					</div>
+				</div>
+
+				<div class="color_dark noDecoration m-full card bg_thirdy shadow">
+					<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+					<div class="pad">
+						<h4 class="mb">Ceci est un titre</h4>
+						<p class="mb">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+						</p>
+						<span class="btn">
+							En savoir plus
+						</span>
+					</div>
+				</div>
+
+				<div class="color_dark noDecoration m-full card bg_thirdy shadow">
+					<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+					<div class="pad">
+						<h4 class="mb">Ceci est un titre</h4>
+						<p class="mb">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+						</p>
+						<span class="btn">
+							En savoir plus
+						</span>
+					</div>
+				</div>
+
+				<div class="color_dark noDecoration m-full card bg_thirdy shadow">
+					<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+					<div class="pad">
+						<h4 class="mb">Ceci est un titre</h4>
+						<p class="mb">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+						</p>
+						<span class="btn">
+							En savoir plus
+						</span>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<section>
+		<div class="mt--middle container container--md accordion">
+			<div class="mt center mb">
+				<h3>FAQ</h3>
+			</div>
+			<details class="mt" open>
+				<summary>I have keys but no doors. I have  room. You can but can’t leave ?</summary>
+				<p>
+					Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+				</p>
+			</details>
+
+			<details>
+				<summary>I have keys but. You can enter but can’t leave ?</summary>
+				<p>
+					Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+				</p>
+			</details>
+
+			<details>
+				<summary>I have keys but no doors. I have  room. You can enter but can’t leave ?</summary>
+				<p>
+					Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+				</p>
+			</details>
+
+			<details>
+				<summary>I have keys but no doors. I have space but no room. You enter but can’t leave ?</summary>
+				<p>
+					Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+				</p>
+			</details>
+		</div>
+	</section>
+
+	<section>
+		<div id="map"></div>
+	</section>
+
+	<section>
+		<div class="mt--middle container container--md">
+			<div class="center mb">
+				<h2 class="upper mb">Formulaire</h2>
+			</div>
+			<form class="form" action="#" method="post">
+				<div class="flx">
+					<div class="form_input w--45">
+						<label for="email">Label email</label>
+						<input name="email" id="email" type="email" />
+					</div>
+
+					<div class="form_input w--45">
+						<label for="number">Label number</label>
+						<input name="number" id="number" type="number" />
+					</div>
+
+					<div class="form_input w--45">
+						<label for="password">Label password</label>
+						<input name="password" id="password" type="password" />
+					</div>
+
+					<div class="form_input w--45">
+						<label for="search">Label search</label>
+						<input name="search" id="search" type="search" />
+					</div>
+
+					<div class="form_input w--45">
+						<label for="tel">Label tel</label>
+						<input id="tel" name="tel" type="tel" />
+					</div>
+
+					<div class="form_input w--45">
+						<label for="url">Label url</label>
+						<input name="url" id="url" type="url" />
+					</div>
+
+					<div class="form_input w--45 checkbox">
+						<input name="checkbox" id="checkbox" type="checkbox" />
+						<label for="checkbox">Label checkbox</label>
+					</div>
+					<div class="form_input w--45 checkbox">
+						<input name="radio" id="radio" type="radio" />
+						<label for="radio">Label radio</label>
+					</div>
+
+					<div class="form_input w--45">
+						<label for="file">Label file</label>
+						<input name="file" id="file" type="file" />
+					</div>
+
+					<div class="form_input w--45">
+						<label for="range">Label range</label>
+						<input name="range" id="range" type="range" />
+					</div>
+
+				</div>
+				<div class="form_input w--100">
+					<label for="textarea">Label textarea</label>
+					<textarea name="textarea" id="textarea"></textarea>
+				</div>
+
+				<div class="center">
+					<div aria-hiiden="true" class="loader"></div>
+				</div>
+
+				<div class="center mt mb w--100">
+					<button class="btn mb">
+						<span>Envoyer</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<footer class="mt--middle pad bg_secondary">
+		<div class="flx-around">
+			<p class="">
+				<h4 class="color_light">
+					Footer title
+				</h4>
+			</p>
+			<p class="pad color_light w--40">
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error eius vel reiciendis incidunt commodi sapiente nisi nulla voluptatibus rerum dolore quasi est nihil tempore necessitatibus corrupti, vitae! Ipsum nihil, blanditiis.
+			</p>
+		</div>
+		<div class="center pad">
+			<nav>
+				<a class="inlineBlock noDecoration bg_primary color_light ml mr" href="#" target="_blank" title="facebook">
+					<svg width="16px" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><
+						<path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/>
+					</svg>
+				</a>
+				<a class="noDecoration color_light ml mr" href="#" target="_blank" title="linkedi">
+					<span class="icon icon--linkedin"></span>
+				</a>
+				<a class="noDecoration color_light ml mr" href="#" target="_blank" title="behance">
+					<span class="icon icon--behance"></span>
+				</a>
+			</nav>
+		</div>
+	</footer>
+
+	<modal class="popup flx invisible" data-popup="popup_one">
+		<div class="popup_container">
+			<div class="right">
+				<a href="#" class="js_closePopup" data-popup="popup_one">
+					<span class="icon icon--close"></span>
+				</a>
+			</div>
+			<h2 class="mb">Titre</h2>
+			<p class="mb">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio nobis quae exercitationem molestias distinctio corrupti illum dolor quia, natus voluptatibus rerum cum suscipit ullam obcaecati dignissimos. Eos, recusandae? Quibusdam, sunt?
+			</p>
+			<a class="btn btn--primary" href="#">cta 1</a>
+			<a class="btn btn--light" href="#">cta 2</a>
+		</div>
+	</modal>
+
+	<modal class="popup popup--cookies invisible flx-end-c_end" data-popup="popup_cookies">
+		<div class="popup_container">
+			<div class="right">
+				<a href="#" class="js_closePopup" data-popup="popup_cookies">
+					<span class="icon icon--close"></span>
+				</a>
+			</div>
+			<h2 class="mb">Titre</h2>
+			<p class="mb">
+				Lorem ipsum dolor sit, amet consectetur adipisicinndae? Quibusdam, sunt?
+			</p>
+			<a class="btn btn--secondary" href="#">cta 1</a>
+			<a class="btn btn--light" href="#">cta 2</a>
+		</div>
+	</modal>
+
+	<script src="js/map.js"></script>
+
+	<script src="js/vendor/jQuery.js"></script>
+
+	<script src="js/vendor/slick.min.js"></script>
+
+	<script src="js/vendor/YTPlayer.min.js"></script>
+
+	<script src="js/vendor/BeerSlider.min.js"></script>
+
+	<script src="js/main.js"></script>
+</body>
+</html>
