@@ -1,5 +1,0 @@
-#For a payment online
-composer require stripe/stripe-php
-
-#For send emails
-composer require phpmailer/phpmailer
