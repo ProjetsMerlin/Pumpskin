@@ -1,15 +1,17 @@
-Content
-=======
-Pumpskin contient un ensemble de fichiers et dossier organisés et qui permettront de donner un aperçu du framework css dont il est question.
+Intro
+=====
+Pumpskin est mon framework CSS perso. Vous pouvez avoir un aperçu des éléments ici : <a target="_blank" href="https://pumpskin.lintermediaire.be/" title="pumpskin" >https://pumpskin.lintermediaire.be/</a>
+
+Ce dépôt contient un ensemble de fichiers et dossier organisés et qui permettront de donner un aperçu du framework css dont il est question.
 Vous trouverez ci-dessous sa structure
+
+Installation
+============
+https://pumpskin.lintermediaire.be/style/css/style.css
+
 
 Structure
 =========
-
-img
----
-  les images du template
-
 
 js
 ---
@@ -17,8 +19,6 @@ js
   + jQuery : pour écrire plus facilement le Javascript : https://jquery.com/
   + beerSlider : qui permet de réaliser un "avant-après" -> https://github.com/pehaa/beerslider
   + SlickSlider : pour la mise en place de sliders -> https://kenwheeler.github.io/slick/
-  + YTPlayer : qui permet l'affichage de vidéos -> https://github.com/pupunzi/jquery.mb.YTPlayer
-
 
   et 3 fichiers distincts
   + filter.js : le filtre du blog
