@@ -1,0 +1,13 @@
+.video > video {
+  width: 100%;  
+  height: 56.25%;
+}
+
+/* 2. En cas de support d'object-fit, écrase les règles en (1) */
+@supports (object-fit: cover) {
+  .video > video {
+    width: 100%;  
+    height: 56.25%;
+    object-fit: cover;
+  }
+}

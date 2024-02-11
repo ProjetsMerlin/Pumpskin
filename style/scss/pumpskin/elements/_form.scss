@@ -7,6 +7,7 @@
 		label {
 			display: block;
 			margin-bottom: 6px;
+			color: var(--color_dark);
 			font-weight: bold;
 		}
 
@@ -26,7 +27,7 @@
 	}
 
 	.checkbox {
-		@include checkboxe(24px,$color_dark,$color_light,$color_light,$color_dark,3px);
+		@include checkboxe(24px, var(--color_dark), var(--color_light), var(--color_light), var(--color_dark), 3px);
 
 		[type="radio"] ~ label,
 		[type="checkbox"] ~ label {
@@ -38,7 +39,7 @@
 
 		[type="radio"]:checked ~ label,
 		[type="checkbox"]:checked ~ label{
-			color: $color_dark;
+			color: var(--color_dark);
 			opacity: 1;
 		}
 
@@ -64,7 +65,7 @@
 
 			text-align: center;
 			line-height: 50px;
-			border: 1px dashed grey;
+			border: 1px dashed var(--color_thirdy);
 			opacity: .3;
 			cursor: pointer;
 		}
@@ -73,14 +74,14 @@
 	/* RANGE */
 	[type="range"] {
 		-webkit-appearance: none;
-		background-color: #fafafa;
+		background-color: var(--color_thirdy);
 		max-height: 2px;
 
 		&::-webkit-slider-runnable-track {
 			-webkit-appearance: none;
 			margin-top: -1px;
 			height: 10px;
-			background-color: $color_primary;
+			background-color: var(--color_primary);
 		}
 
 		&::-webkit-slider-thumb {
@@ -89,7 +90,7 @@
 			width: 24px;
 			height: 24px;
 			cursor: ew-resize;
-			background: $color_secondary;
+			background: var(--color_secondary);
 			border-radius: 50%;
 		}
 

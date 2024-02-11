@@ -1,26 +1,39 @@
-$font_title: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-$font_text: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font_title: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif!default;
+$font_text: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!default;
 
 $taille: 24px!default;
 
-$color_primary: orange!default;
-$color_secondary: #455d7a!default;
-$color_light: #ffffff!default;
-$color_dark: #000000!default;
-$color_error: pink!default;
-$color_success: #8bc34f!default;
-$color_warning: red!default;
-$color_thirdy: #ededed!default;
+body {
+  --color_primary: orange!default;
+  --color_secondary: #455d7a!default;
+  --color_light: #ffffff!default;
+  --color_dark: #000000!default;
+  --color_error: pink!default;
+  --color_success: #8bc34f!default;
+  --color_warning: red!default;
+  --color_thirdy: #dedede!default;
+}
+
+body:has( .toggle:checked) {
+  --color_primary: #000000!default;
+  --color_secondary: #dedede!default;
+  --color_light: #ffffff!default;
+  --color_dark: #000000!default;
+  --color_error: pink!default;
+  --color_success: #8bc34f!default;
+  --color_warning: red!default;
+  --color_thirdy: #dedede!default;
+}
 
 $colors: (
-"primary": $color_primary,
-"secondary": $color_secondary,
-"thirdy": $color_thirdy,
-"warning": $color_warning,
-"success": $color_success,
-"error": $color_error,
-"light": $color_light,
-"dark": $color_dark
+"primary": var(--color_primary),
+"secondary": var(--color_secondary),
+"thirdy": var(--color_thirdy),
+"warning": var(--color_warning),
+"success": var(--color_success),
+"error": var(--color_error),
+"light": var(--color_light),
+"dark": var(--color_dark)
 );
 
 @each $slug, $color in $colors {
@@ -31,7 +44,7 @@ $colors: (
   
   /* background */
   .bg_#{$slug} {
-    background: $color;
+    background-color: $color;
   }
 }
 

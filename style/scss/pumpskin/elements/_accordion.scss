@@ -1,11 +1,13 @@
 .accordion {
 	$accordionWidth: 0px;
-	$accordionColorPrimary: $color_light;
-	$accordionColorSecondary: $color_dark;
+	$accordionColorPrimary: var(--color_light);
+	$accordionColorSecondary: var(--color_primary);
 
 	details {
+		color: $accordionColorSecondary;
+		background-color: $accordionColorPrimary;
 		line-height: 150%;
-		border: $accordionWidth solid $accordionColorPrimary;
+		border: $accordionWidth solid $accordionColorSecondary;
 		border-bottom-width: 0px;
 		cursor: pointer;
 
@@ -17,7 +19,7 @@
 		&:hover summary,
 		&:active summary {
 			color: $accordionColorPrimary;
-			background: $accordionColorSecondary;
+			background-color: $accordionColorSecondary;
 		}
 
 		&[open] summary::after {
@@ -28,8 +30,6 @@
 	summary {
 		position: relative;
 		padding: 12px 24px;
-		color: $accordionColorSecondary;
-		background: $accordionColorPrimary;
 		font-weight: bold;
 		font-family: sans-serif;
 

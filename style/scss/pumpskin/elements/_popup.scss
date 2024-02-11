@@ -1,5 +1,5 @@
 $popupColorBackground: rgba(0,0,0,.85);
-$popupContentBackground: $color_light;
+$popupContentBackground: var(--color_light);
 
 .popup {
   position: fixed;
@@ -24,6 +24,6 @@ $popupContentBackground: $color_light;
 
   .popup--cookies & {
     margin: 12px 24px;
-    background: $color_primary;
+    background: var(--color_primary);
   }
 }

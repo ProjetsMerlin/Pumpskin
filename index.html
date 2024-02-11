@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr-BE">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Pumpskin</title>
-	<link rel="stylesheet" href="style/css/vendor/print.min.css" media="print" />
-	<link rel="stylesheet" href="style/css/style.css" />
-
 	<link rel="stylesheet" href="style/css/vendor/slick.min.css" />
 	<link rel="stylesheet" href="style/css/vendor/BeerSlider.min.css" />
-	<link rel="stylesheet" href="style/css/vendor/YTPlayerStyle.min.css" />
-
+	<link rel="stylesheet" href="style/css/style.css" />
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+	<script type="module" src="js/map.js"></script>
 </head>
-<body>
-	<div class="progess_bar"></div>
+<body class="test">
+	<div aria-hidden="true" class="progess_bar"></div>
 	<header class="header bg_primary flx">
 		<a class="noDecoration color_light pl logo" href="/">
 			<h3>
@@ -29,11 +27,15 @@
 			<span class="icon icon--close"></span>
 		</a>
 		<menu class="menu flx-end">
-			<a class="noDecoration mr upper color_light link_actif" href="index.html">Home</a>
-			<a class="noDecoration mr upper color_light" href="historique.html">Historique</a>
-			<a class="noDecoration mr upper color_light" href="services.html">Services</a>
-			<a class="noDecoration mr upper color_light" href="blog.html">Blog</a>
-			<a class="noDecoration mr upper color_light" href="contact.html">Contact</a>
+			<a class="noDecoration mr upper color_light link_actif" title="Pumpskin" href="index.html">Home</a>
+			<a class="noDecoration mr upper color_light" title="Pumpskin" href="index.html">Historique</a>
+			<a class="noDecoration mr upper color_light" title="Pumpskin" href="index.html">Services</a>
+			<a class="noDecoration mr upper color_light" title="Pumpskin" href="index.html">Blog</a>
+			<a class="noDecoration mr upper color_light" title="Pumpskin" href="index.html">Contact</a>
+			<span class="color_light">
+				<label for="themeStyle">Dark / Light</label>
+				<input type="checkbox" id="themeStyle" name="themeStyle" class="toggle" />
+			</span>
 		</menu>
 	</header>
 
@@ -69,7 +71,7 @@
 	<section class="bg_primary pad">
 		<div class="container container--xl flx-between mt--middle mb">
 			<div class="w--50 pad ">
-				<img class="w--100" src="img/image_03_300x300.jpg" alt="Pumpskin" title="Pumpskin" />
+				<img class="w--100" src="https://placehold.co/600x400" alt="Pumpskin" title="Pumpskin" />
 			</div>
 			<div class="w--45 pad color_light">
 				<h2 class="mb color_seconndary">Ceci est un titre</h2>
@@ -83,7 +85,7 @@
 	<section class="bg_light pad">
 		<div class="container container--xl flx-between-row_reverse mt mb">
 			<div class="w--50 pad ">
-				<img class="w--100" src="img/image_03_300x300.jpg" alt="Pumpskin" title="Pumpskin" />
+				<img class="w--100" src="https://placehold.co/600x400" alt="Pumpskin" title="Pumpskin" />
 			</div>
 			<div class="w--45 pad color_primart">
 				<h3 class="mb color_seconndary">Ceci est un titre</h3>
@@ -100,9 +102,9 @@
 		<div class="flx-between-row_reverse">
 			<div class="w--50">
 				<div id="beer-slider" class="beer-slider w--100" data-beer-label="" data-beer-start="50">
-					<img class="w--100" src="img/image_02_300x200.jpg" title="" alt="">
+					<img class="w--100" src="https://placehold.co/600x400/000000/FFFFFF/png" title="Pumpskin" alt="Pumpskin" />
 					<div class="beer-reveal" data-beer-label="">
-						<img class="w--100 black-and-white" src="img/image_02_300x200.jpg">
+						<img class="w--100 black-and-white" src="https://placehold.co/600x400" title="Pumpskin" alt="Pumpskin" />
 					</div>
 				</div>
 			</div>
@@ -120,7 +122,21 @@
 	<section class="bg_success">
 		<div class="flx-between">
 			<div class="w--50">
-				<div id="bgndVideo" class="player" data-property="{videoURL:'https://youtu.be/K0GxmnFdjfE'}"></div>
+				<div class="video">
+					<video controls="false">
+					  <!-- Source vidéo par défaut -->
+					  <source type="video/mp4" src="video/pumpskin.mp4" autoplay="" loop="true" muted="true" media="(orientation: landscape)" />
+					  <source type="video/webm" src="video/pumpskin.webm" autoplay="" loop="true" muted="true" media="(orientation: landscape)" />
+					  <!-- 
+					  <source type="video/mp4" src="video/pumpskin_portrait.mp4" autoplay="" loop="true" muted="true" media="(orientation: portrait)" />
+					  <source type="video/webm" src="video/pumpskin_portrait.webm" autoplay="" loop="true" muted="true" media="(orientation: portrait)" />
+					   -->
+					   <p>
+						désolé mais votre navigateur ne supporte pas les vidéos
+					   </p>
+					</video>
+					<!-- Ici les boutons ou les métadonnées -->
+				  </div>
 			</div>
 			<div class="w--40 mr pad color_light">
 				<h3 class="mt mb">Ceci est un titre</h3>
@@ -134,119 +150,211 @@
 	</section>
 
 	<section>
-		<div class="mt--middle center mb pad">
-			<h2 class="upper">Blog</h2>
-		</div>
-		<div class="container container--xxl flx-center-wrap mb">
-			<a href="article.html" class="w--25 color_dark noDecoration m-full card bg_thirdy shadow">
-				<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
-				<div class="pad">
-					<h4 class="mb">Ceci est un titre</h4>
-					<p class="mb">
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
-					</p>
-					<span class="btn">
-						En savoir plus
-					</span>
+		<div class="container container--md">
+			<form class="form mt--middle flx filter" method="post" action="#">
+				<div class="mt form_input w--33">
+					<label for="text">Text filter</label>
+					<input id="text" name="text" type="text" placeholder="Filter by text" />
 				</div>
-			</a>
 
-			<a href="article.html" class="w--25 color_dark noDecoration m-full card bg_thirdy shadow">
-				<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
-				<div class="pad">
-					<h4 class="mb">Ceci est un titre</h4>
-					<p class="mb">
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
-					</p>
-					<span class="btn">
-						En savoir plus
-					</span>
+				<div class="mt form_input w--33">
+					<label for="select">Exclusive filter</label>
+					<select name="select" id="select">
+						<option value="" disabled selected>- Uniq Choices -</option>
+						<option value="a">A</option>
+						<option value="b">B</option>
+					</select>
 				</div>
-			</a>
 
-			<a href="article.html" class="w--25 color_dark noDecoration m-full card bg_thirdy shadow">
-				<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
-				<div class="pad">
-					<h4 class="mb">Ceci est un titre</h4>
-					<p class="mb">
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
-					</p>
-					<span class="btn">
-						En savoir plus
-					</span>
+				<div class="mt form_input w--33">
+					<label for="date">Date filter</label>
+					<input id="date" name="date" type="date" />
 				</div>
-			</a>
 
-			<a href="article.html" class="w--25 color_dark noDecoration m-full card bg_thirdy shadow">
-				<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
-				<div class="pad">
-					<h4 class="mb">Ceci est un titre</h4>
-					<p class="mb">
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
-					</p>
-					<span class="btn">
-						En savoir plus
-					</span>
+					<div class="form_input w--100">
+						<div class="inline checkbox mr">
+							<input type="checkbox" checked="true" id="18" value="18" name="checkbox" />
+							<label for="18">checkbox 18</label>
+						</div>
+
+						<div class="inline checkbox mr">
+							<input type="checkbox" checked="true" id="27" value="27" name="checkbox" />
+							<label for="27">checkbox 27</label>
+						</div>
+
+						<div class="inline checkbox mr">
+							<input type="checkbox" checked="true" id="33" value="33" name="checkbox" />
+							<label for="33">checkbox 33</label>
+						</div>
+
+
+					<div class="mt inlineBlock form_input w--33">
+						<label for="range">Range filter</label>
+						<input min="0" max="100" step="10" value="100" name="range" type="range" />
+					</div>
+
+					</div>
+
+				<div class="w--100 center">
+					<input class="btn btn--success" type="submit" value="Filtrer" />
+					<input class="btn" type="reset" value="Reset" />
 				</div>
-			</a>
 
-			<a href="article.html" class="w--25 color_dark noDecoration m-full card bg_thirdy shadow">
-				<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
-				<div class="pad">
-					<h4 class="mb">Ceci est un titre</h4>
-					<p class="mb">
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
-					</p>
-					<span class="btn">
-						En savoir plus
-					</span>
-				</div>
-			</a>
+			</form>
 
-			<a href="article.html" class="w--25 color_dark noDecoration m-full card bg_thirdy shadow">
-				<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
-				<div class="pad">
-					<h4 class="mb">Ceci est un titre</h4>
-					<p class="mb">
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
-					</p>
-					<span class="btn">
-						En savoir plus
-					</span>
-				</div>
-			</a>
+			<div class="mt mb center">
+				<div id="pagination"></div>
+			</div>
 
-			<a href="article.html" class="w--25 color_dark noDecoration m-full card bg_thirdy shadow">
-				<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
-				<div class="pad">
-					<h4 class="mb">Ceci est un titre</h4>
-					<p class="mb">
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
-					</p>
-					<span class="btn">
-						En savoir plus
-					</span>
-				</div>
-			</a>
-
-			<a href="article.html" class="w--25 color_dark noDecoration m-full card bg_thirdy shadow">
-				<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
-				<div class="pad">
-					<h4 class="mb">Ceci est un titre</h4>
-					<p class="mb">
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
-					</p>
-					<span class="btn">
-						En savoir plus
-					</span>
-				</div>
-			</a>
-
+			<div class="mt mb center results"></div>
 		</div>
 	</section>
 
 	<section>
-		<div class="container container--md">
+		<div class="container container--xxl flx-center-wrap mt mb blog">
+			<a data-date="2023-01-02" data-range="80" data-select="a" href="#" class="33 w--20 color_dark noDecoration m-full card bg_thirdy shadow">
+				<img class="w--100" src="https://placehold.co/600x400/png" alt="Pumpskin" title="Pumpskin">
+				<div class="pad">
+					<h4 class="mb">Ceci est un titre</h4>
+					<p class="mb">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+					</p>
+					<span class="strong">02-01-2023</span> | Catégorie <span class="upper">a</span>
+					<div class="mt mb">
+						<strong>Slugs : </strong> <span class="em">33</span>
+					</div>
+					<span class="btn">
+						En savoir plus
+					</span>
+				</div>
+			</a>
+
+			<a data-date="2023-02-02" data-range="50" data-select="a" href="#" class="18 w--20 color_dark noDecoration m-full card bg_thirdy shadow">
+				<img class="w--100" src="https://placehold.co/600x400/png" alt="Pumpskin" title="Pumpskin">
+				<div class="pad">
+					<h4 class="mb">Ceci est un titre</h4>
+					<p class="mb">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+					</p>
+					<span class="strong">02-01-2023</span> | Catégorie <span class="upper">a</span>
+					<div class="mt mb">
+						<strong>Slugs : </strong> <span class="em">18</span>
+					</div>
+					<span class="btn">
+						En savoir plus
+					</span>
+				</div>
+			</a>
+
+			<a data-date="2023-03-02" data-range="80" data-select="a" href="#" class="18 w--20 color_dark noDecoration m-full card bg_thirdy shadow">
+				<img class="w--100" src="https://placehold.co/600x400/png" alt="Pumpskin" title="Pumpskin">
+				<div class="pad">
+					<h4 class="mb">Ceci est un titre</h4>
+					<p class="mb">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+					</p>
+					<span class="strong">02-01-2023</span> | Catégorie <span class="upper">a</span>
+					<div class="mt mb">
+						<strong>Slugs : </strong> <span class="em">18</span>
+					</div>
+					<span class="btn">
+						En savoir plus
+					</span>
+				</div>
+			</a>
+
+			<a data-date="2023-04-02" data-range="30" data-select="b" href="#" class="33 w--20 color_dark noDecoration m-full card bg_thirdy shadow">
+				<img class="w--100" src="https://placehold.co/600x400/png" alt="Pumpskin" title="Pumpskin">
+				<div class="pad">
+					<h4 class="mb">Ceci est un titre</h4>
+					<p class="mb">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+					</p>
+					<span class="strong">02-01-2023</span> | Catégorie <span class="upper">a</span>
+					<div class="mt mb">
+						<strong>Slugs : </strong> <span class="em">33</span>
+					</div>
+					<span class="btn">
+						En savoir plus
+					</span>
+				</div>
+			</a>
+
+			<a data-date="2023-05-02" data-range="70" data-select="b" href="#" class="27 w--20 color_dark noDecoration m-full card bg_thirdy shadow">
+				<img class="w--100" src="https://placehold.co/600x400/png" alt="Pumpskin" title="Pumpskin">
+				<div class="pad">
+					<h4 class="mb">Ceci est un titre</h4>
+					<p class="mb">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+					</p>
+					<span class="strong">02-01-2023</span> | Catégorie <span class="upper">a</span>
+					<div class="mt mb">
+						<strong>Slugs : </strong> <span class="em">27</span>
+					</div>
+					<span class="btn">
+						En savoir plus
+					</span>
+				</div>
+			</a>
+
+			<a data-date="2023-01-02" data-range="10" data-select="b" href="#" class="27 w--20 color_dark noDecoration m-full card bg_thirdy shadow">
+				<img class="w--100" src="https://placehold.co/600x400/png" alt="Pumpskin" title="Pumpskin">
+				<div class="pad">
+					<h4 class="mb">Ceci est un titre</h4>
+					<p class="mb">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+					</p>
+					<span class="strong">02-01-2023</span> | Catégorie <span class="upper">a</span>
+					<div class="mt mb">
+						<strong>Slugs : </strong> <span class="em">27</span>
+					</div>
+					<span class="btn">
+						En savoir plus
+					</span>
+				</div>
+			</a>
+
+			<a data-date="2023-01-02" data-range="10" data-select="b" href="#" class="18 27 w--20 color_dark noDecoration m-full card bg_thirdy shadow">
+				<img class="w--100" src="https://placehold.co/600x400/png" alt="Pumpskin" title="Pumpskin">
+				<div class="pad">
+					<h4 class="mb">Ceci est un titre</h4>
+					<p class="mb">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+					</p>
+					<span class="strong">02-01-2023</span> | Catégorie <span class="upper">a</span>
+					<div class="mt mb">
+						<strong>Slugs : </strong> <span class="em">18 27</span>
+					</div>
+					<span class="btn">
+						En savoir plus
+					</span>
+				</div>
+			</a>
+
+			<a data-date="2023-01-02" data-range="20" data-select="a" href="#" class="27 33 w--20 color_dark noDecoration m-full card bg_thirdy shadow">
+				<img class="w--100" src="https://placehold.co/600x400/png" alt="Pumpskin" title="Pumpskin">
+				<div class="pad">
+					<h4 class="mb">Ceci est un titre</h4>
+					<p class="mb">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. ...
+					</p>
+					<span class="strong">02-01-2023</span> | Catégorie <span class="upper">a</span>
+					<div class="mt mb">
+						<strong>Slugs : </strong> <span class="em">27 33</span>
+					</div>
+					<span class="btn">
+						En savoir plus
+					</span>
+				</div>
+			</a>
+			<div class="center no_result" style="display: none;">
+				No results
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container container--md pad">
 			<div class="mt--middle mb center">
 				<h4>Example Table</h4>
 			</div>
@@ -304,7 +412,7 @@
 		<div class="container container--xxl mb">
 			<div class="slider mb">
 				<div class="color_dark noDecoration m-full card bg_thirdy shadow">
-					<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+					<img class="w--100" src="https://placehold.co/600x400" alt="Pumpskin" title="Pumpskin">
 					<div class="pad">
 						<h4 class="mb">Ceci est un titre</h4>
 						<p class="mb">
@@ -317,7 +425,7 @@
 				</div>
 
 				<div class="color_dark noDecoration m-full card bg_thirdy shadow">
-					<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+					<img class="w--100" src="https://placehold.co/600x400" alt="Pumpskin" title="Pumpskin">
 					<div class="pad">
 						<h4 class="mb">Ceci est un titre</h4>
 						<p class="mb">
@@ -330,7 +438,7 @@
 				</div>
 
 				<div class="color_dark noDecoration m-full card bg_thirdy shadow">
-					<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+					<img class="w--100" src="https://placehold.co/600x400" alt="Pumpskin" title="Pumpskin">
 					<div class="pad">
 						<h4 class="mb">Ceci est un titre</h4>
 						<p class="mb">
@@ -343,7 +451,7 @@
 				</div>
 
 				<div class="color_dark noDecoration m-full card bg_thirdy shadow">
-					<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+					<img class="w--100" src="https://placehold.co/600x400" alt="Pumpskin" title="Pumpskin">
 					<div class="pad">
 						<h4 class="mb">Ceci est un titre</h4>
 						<p class="mb">
@@ -356,7 +464,7 @@
 				</div>
 
 				<div class="color_dark noDecoration m-full card bg_thirdy shadow">
-					<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+					<img class="w--100" src="https://placehold.co/600x400" alt="Pumpskin" title="Pumpskin">
 					<div class="pad">
 						<h4 class="mb">Ceci est un titre</h4>
 						<p class="mb">
@@ -369,7 +477,7 @@
 				</div>
 
 				<div class="color_dark noDecoration m-full card bg_thirdy shadow">
-					<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+					<img class="w--100" src="https://placehold.co/600x400" alt="Pumpskin" title="Pumpskin">
 					<div class="pad">
 						<h4 class="mb">Ceci est un titre</h4>
 						<p class="mb">
@@ -382,7 +490,7 @@
 				</div>
 
 				<div class="color_dark noDecoration m-full card bg_thirdy shadow">
-					<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+					<img class="w--100" src="https://placehold.co/600x400" alt="Pumpskin" title="Pumpskin">
 					<div class="pad">
 						<h4 class="mb">Ceci est un titre</h4>
 						<p class="mb">
@@ -395,7 +503,7 @@
 				</div>
 
 				<div class="color_dark noDecoration m-full card bg_thirdy shadow">
-					<img class="w--100" src="img/pic01.jpg" alt="Pumpskin" title="Pumpskin">
+					<img class="w--100" src="https://placehold.co/600x400" alt="Pumpskin" title="Pumpskin">
 					<div class="pad">
 						<h4 class="mb">Ceci est un titre</h4>
 						<p class="mb">
@@ -413,7 +521,7 @@
 	</section>
 
 	<section>
-		<div class="mt--middle container container--md accordion">
+		<div class="mt--middle container container--md accordion pad mb">
 			<div class="mt center mb">
 				<h3>FAQ</h3>
 			</div>
@@ -448,7 +556,7 @@
 	</section>
 
 	<section>
-		<div id="map"></div>
+		<div id="map" class="map mt"></div>
 	</section>
 
 	<section>
@@ -456,11 +564,11 @@
 			<div class="center mb">
 				<h2 class="upper mb">Formulaire</h2>
 			</div>
-			<form class="form" action="#" method="post">
+			<form class="form" action="#" method="post" class="color_primary">
 				<div class="flx">
 					<div class="form_input w--45">
 						<label for="email">Label email</label>
-						<input name="email" id="email" type="email" />
+						<input name="email" id="email" autocomplete="email" type="email" />
 					</div>
 
 					<div class="form_input w--45">
@@ -480,7 +588,7 @@
 
 					<div class="form_input w--45">
 						<label for="tel">Label tel</label>
-						<input id="tel" name="tel" type="tel" />
+						<input id="tel" name="tel" type="tel" autocomplete="email" />
 					</div>
 
 					<div class="form_input w--45">
@@ -526,9 +634,19 @@
 		</div>
 	</section>
 
-	<footer class="mt--middle pad bg_secondary">
-		<div class="flx-around">
-			<p class="">
+	<section class="bg_thirdy">
+		<div class="container container--sm h_100 flx-col-center pad">
+			<h2 class="mb">404 error</h2>
+			<p class="center mb">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates laudantium et cum alias quae quia explicabo nesciunt impedit dignissimos, aliquam itaque adipisci nostrum soluta consequuntur natus nulla ut sint facilis.
+			</p>
+			<a href="#" class="mt btn js_openPopup" data-popup="popup_one">Button</a>
+		</div>
+	</section>
+
+	<footer class="pad bg_secondary">
+		<div class="mt mb flx-around">
+			<p>
 				<h4 class="color_light">
 					Footer title
 				</h4>
@@ -537,18 +655,30 @@
 				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error eius vel reiciendis incidunt commodi sapiente nisi nulla voluptatibus rerum dolore quasi est nihil tempore necessitatibus corrupti, vitae! Ipsum nihil, blanditiis.
 			</p>
 		</div>
-		<div class="center pad">
+		<div class="mt center pad">
 			<nav>
-				<a class="inlineBlock noDecoration bg_primary color_light ml mr" href="#" target="_blank" title="facebook">
-					<svg width="16px" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><
+				<a class="btn btn--icon rounded ml mr" href="#" target="_blank" title="facebook">
+					<span class="inlineBlock">
+					<svg width="16px" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
 						<path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/>
 					</svg>
+					</span>
 				</a>
-				<a class="noDecoration color_light ml mr" href="#" target="_blank" title="linkedi">
-					<span class="icon icon--linkedin"></span>
+
+				<a class="btn btn--success btn--icon ml mr" href="#" target="_blank" title="facebook">
+					<span class="inlineBlock">
+					<svg width="16px" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+						<path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/>
+					</svg>
+					</span>
 				</a>
-				<a class="noDecoration color_light ml mr" href="#" target="_blank" title="behance">
-					<span class="icon icon--behance"></span>
+
+				<a class="btn btn--warning btn--icon ml mr rounded" href="#" target="_blank" title="facebook">
+					<span class="inlineBlock">
+					<svg width="16px" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+						<path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/>
+					</svg>
+					</span>
 				</a>
 			</nav>
 		</div>
@@ -586,16 +716,17 @@
 		</div>
 	</modal>
 
-	<script src="js/map.js"></script>
-
 	<script src="js/vendor/jQuery.js"></script>
 
 	<script src="js/vendor/slick.min.js"></script>
 
-	<script src="js/vendor/YTPlayer.min.js"></script>
-
 	<script src="js/vendor/BeerSlider.min.js"></script>
 
 	<script src="js/main.js"></script>
+
+	<script src="js/filter.js"></script>
+
+	    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyDuiSMyJ5DOMLl39CI9OLnRJUz94cVLXpw", v: "weekly"});</script>
 </body>
 </html>

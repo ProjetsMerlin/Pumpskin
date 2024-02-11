@@ -30,7 +30,7 @@ $titles: 1,2,3,4,5,6;
 @each $size in $titles {
   h#{$size} {
     font-size: calc( calc(10 - #{$size}) * 0.3em );
-    line-height: calc( calc(10 - #{$size}) * 0.15em );
+    line-height: 150%;
   }
 }
 
@@ -86,7 +86,6 @@ ol li {
 hr {
   margin: $taille 0px;
   height: 1px;
-  background: #dedede;
   border: none;
 }
 
@@ -94,8 +93,6 @@ blockquote,
 pre {
   margin-left: 16px;
   padding: 7px;
-  background: #dedede;
-  border: 0px solid grey;
   border-left-width: 6px;
 }
 
@@ -104,22 +101,28 @@ table {
   width: 100%;
 
   th {
+    background-color: var(--color_primary);
+    color: var(--color_light);
     text-align: center;
-    border: 1px solid white;
   }
-
 
   td {
     padding: 0 calc(#{$taille} / 2);
-    border: 1px solid white;
+    color: var(--color_light);
+    border: 1px solid var(--color_light);
   }
 
   tr {
     height: 40px;
     line-height: 40px;
+    background-color: var(--color_primary);
 
-    &:nth-of-type(even) {
-      background: $color_thirdy;
+    &:nth-of-type(odd) {
+      background-color: var(--color_thirdy);
+
+      td {
+        color: var(--color_dark);
+      }
     }
   }
 }
@@ -163,15 +166,4 @@ table {
 /* variant */
 .smallCaps {
   font-variant: small-caps;
-}
-
-/* exposaants */
-.sup {
-  vertical-align: top;
-  font-size: 70%;
-}
-
-.sub {
-  vertical-align: baseline;
-  font-size: 70%;
 }

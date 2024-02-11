@@ -9,11 +9,20 @@
 }
 
 .btn {
-  @include button($color_primary,$color_light);
+  @include button(var(--color_primary), var(--color_light) );
   padding: 0px 16px;
   height: 48px;
   font-size: 16px;
   line-height: 48px;
+
+  &--icon {
+    padding-top: 6px;
+
+    &:hover svg,
+    &:active svg {
+      fill: var(--color_primary);
+    }
+  }
 
   &--big {
     padding: 0 24px;
@@ -30,24 +39,24 @@
   }
 
   &--secondary {
-    @include button($color_secondary,$color_light);
+    @include button(var(--color_secondary), var(--color_light) );
   }
 
   &--warning {
-    @include button($color_warning,$color_light);
+    @include button(var(--color_warning), var(--color_light) );
     border-radius: 15px;
   }
 
   &--success {
-    @include button($color_success,$color_dark);
+    @include button(var(--color_success), var(--color_dark) );
   }
 
   &--error {
-    @include button($color_error,$color_dark);
+    @include button(var(--color_error), var(--color_dark) );
   }
 
   &--light {
-    @include button($color_light,$color_dark);
-    border: 1px solid $color_dark;
+    @include button(var(--color_light), var(--color_dark) );
+    border: 1px solid var(--color_dark) ;
   }
 }
