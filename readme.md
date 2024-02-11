@@ -2,16 +2,18 @@ Intro
 =====
 Pumpskin est mon framework CSS perso. Vous pouvez avoir un aperçu des éléments ici : https://pumpskin.lintermediaire.be/
 
-Ce dépôt contient un ensemble de fichiers et dossier organisés et qui permettront de donner un aperçu du framework css dont il est question.
-Vous trouverez ci-dessous sa structure.
+Ce dépôt contient donc un ensemble de fichiers et dossier organisés et qui permettront de donner un aperçu du framework CSS/SCSS dont il est question. Vous trouverez ci-dessous sa structure et comment l'installer.
 
 Installation
 ============
+
 Placez ce code à la bonne place dans votre HTML ;
 ```
 <link rel="stylesheet" href="https://pumpskin.lintermediaire.be/style/css/style.css" />
 
+<script src="https://pumpskin.lintermediaire.be/js/vendor/jQuery.js"></script>
 <script src="https://pumpskin.lintermediaire.be/js/main.js"></script>
+<!-- OPTIONAL -->
 <script src="https://pumpskin.lintermediaire.be/js/filter.js"></script>
 ```
 

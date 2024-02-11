@@ -5,13 +5,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Pumpskin</title>
 	<link rel="icon" type="image/x-icon" href="https://placehold.co/48x48">
+	
+	<!-- SLICK SLIDER -->
 	<link rel="stylesheet" href="style/css/vendor/slick.min.css" />
+	
+	<!-- BEER SLIDER -->
 	<link rel="stylesheet" href="style/css/vendor/BeerSlider.min.css" />
+	
+	<!-- PUMPSKIN ! -->
 	<link rel="stylesheet" href="style/css/style.css" />
+	
+	<!-- polyfill -->
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+	<!-- PUMPSKIN + GMAP -->
 	<script type="module" src="js/map.js"></script>
 </head>
-<body class="test">
+<body>
 	<div aria-hidden="true" class="progess_bar"></div>
 	<header class="header bg_primary flx">
 		<a class="noDecoration color_light pl logo" href="/">
@@ -716,17 +726,20 @@
 			<a class="btn btn--light" href="#">cta 2</a>
 		</div>
 	</modal>
-
+	<!-- jQuery -->
 	<script src="js/vendor/jQuery.js"></script>
-
+	
+	<!-- SLICK SLIDER -->
 	<script src="js/vendor/slick.min.js"></script>
-
+	
+	<!-- BEER SLIDER -->
 	<script src="js/vendor/BeerSlider.min.js"></script>
-
+	
+	<!-- PUMPSKIN ! -->
 	<script src="js/main.js"></script>
-
 	<script src="js/filter.js"></script>
 
+	<!-- G MAP -->
 	<script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
         ({key: "AIzaSyA0wre-eaoqvUnakdX2y5FzS3uFEGlLiXo", v: "weekly"});</script>
 </body>
