@@ -1,13 +1,16 @@
 Intro
 =====
-Pumpskin est mon framework CSS perso. Vous pouvez avoir un aperçu des éléments ici : <a target="_blank" href="https://pumpskin.lintermediaire.be/" title="pumpskin" >https://pumpskin.lintermediaire.be/</a>
+Pumpskin est mon framework CSS perso. Vous pouvez avoir un aperçu des éléments ici : https://pumpskin.lintermediaire.be/
 
 Ce dépôt contient un ensemble de fichiers et dossier organisés et qui permettront de donner un aperçu du framework css dont il est question.
-Vous trouverez ci-dessous sa structure
+Vous trouverez ci-dessous sa structure.
 
 Installation
 ============
-https://pumpskin.lintermediaire.be/style/css/style.css
+Placez ce code à la bonne place dans votre HTML ;
+<link rel="stylesheet" href="https://pumpskin.lintermediaire.be/style/css/style.css" />
+
+Et éventuellement les dépendances* si vous souhaitez vous en servir.
 
 
 Structure
@@ -15,7 +18,7 @@ Structure
 
 js
 ---
-  vendor : 3 librairies externes
+  vendor : 3 librairies externes *
   + jQuery : pour écrire plus facilement le Javascript : https://jquery.com/
   + beerSlider : qui permet de réaliser un "avant-après" -> https://github.com/pehaa/beerslider
   + SlickSlider : pour la mise en place de sliders -> https://kenwheeler.github.io/slick/
