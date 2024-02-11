@@ -34,9 +34,9 @@ style
 
   + scss
     + pumpskin : le framework en question et que je divise en trois catégories qui parlent d'elles-mêmes
-      + base
+      + base (Où vous trouverez les variables, le style de base de la typo & les variables)
       + elements
-      + position
+      + position (Le positionnement et la taille des éléments. C'est aussi là que vous trouverez les propriétés des flex-boxes)
     
     + theme
         + my_theme: c'est ici qu'il est possible de customiser votre propre thème
