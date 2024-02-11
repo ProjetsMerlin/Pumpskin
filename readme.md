@@ -8,7 +8,12 @@ Vous trouverez ci-dessous sa structure.
 Installation
 ============
 Placez ce code à la bonne place dans votre HTML ;
+```
 <link rel="stylesheet" href="https://pumpskin.lintermediaire.be/style/css/style.css" />
+
+<script src="https://pumpskin.lintermediaire.be/js/main.js"></script>
+<script src="https://pumpskin.lintermediaire.be/js/filter.js"></script>
+```
 
 Et éventuellement les dépendances* si vous souhaitez vous en servir.
 
