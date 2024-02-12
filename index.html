@@ -135,7 +135,6 @@
 			<div class="w--50">
 				<div class="video">
 					<video controls="false">
-					  <!-- Source vidéo par défaut -->
 					  <source type="video/mp4" src="video/pumpskin.mp4" autoplay="" loop="true" muted="true" media="(orientation: landscape)" />
 					  <source type="video/webm" src="video/pumpskin.webm" autoplay="" loop="true" muted="true" media="(orientation: landscape)" />
 					  <!-- 
@@ -146,7 +145,7 @@
 						désolé mais votre navigateur ne supporte pas les vidéos
 					   </p>
 					</video>
-					<!-- Ici les boutons ou les métadonnées -->
+					<!-- métadonnées -->
 				  </div>
 			</div>
 			<div class="w--40 mr pad color_light">
@@ -181,42 +180,33 @@
 					<label for="date">Date filter</label>
 					<input id="date" name="date" type="date" />
 				</div>
-
 					<div class="form_input w--100">
 						<div class="inline checkbox mr">
 							<input type="checkbox" checked="true" id="18" value="18" name="checkbox" />
 							<label for="18">checkbox 18</label>
 						</div>
-
 						<div class="inline checkbox mr">
 							<input type="checkbox" checked="true" id="27" value="27" name="checkbox" />
 							<label for="27">checkbox 27</label>
 						</div>
-
 						<div class="inline checkbox mr">
 							<input type="checkbox" checked="true" id="33" value="33" name="checkbox" />
 							<label for="33">checkbox 33</label>
 						</div>
-
-
 					<div class="mt inlineBlock form_input w--33">
 						<label for="range">Range filter</label>
 						<input min="0" max="100" step="10" value="100" name="range" type="range" />
 					</div>
-
 					</div>
-
 				<div class="w--100 center">
 					<input class="btn btn--success" type="submit" value="Filtrer" />
 					<input class="btn" type="reset" value="Reset" />
 				</div>
-
 			</form>
 
 			<div class="mt mb center">
 				<div id="pagination"></div>
 			</div>
-
 			<div class="mt mb center results"></div>
 		</div>
 	</section>
