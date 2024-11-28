@@ -1,6 +1,6 @@
 Intro
 =====
-Pumpskin est mon framework CSS perso. Vous pouvez avoir un aperçu des éléments ici : https://pumpskin.lintermediaire.be/
+Pumpskin est mon framework CSS perso. Vous pouvez avoir un aperçu des éléments ici : [https://pumpskin.lintermediaire.be/](https://projetsmerlin.github.io/Pumpskin/)
 
 Ce dépôt contient donc un ensemble de fichiers et dossier organisés et qui permettront de donner un aperçu du framework CSS/SCSS dont il est question. Vous trouverez ci-dessous sa structure et comment l'installer.
 
