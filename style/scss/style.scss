@@ -9,5 +9,30 @@
 @import 'pumpskin/pumpskin';
 
 /*
-G MAP
+A TESTER :
+↳ Padding des boutons : 16px/24px
+↳ Marges des paragraphes : 24px
+↳ Espacement des grilles : 32px
+↳ Séparation des sections : 64px
 */
+
+@function size($index) {
+  $base-size: 8px;
+  @return $base-size * $index;
+}
+
+$sizes: (
+  xx-small: 1,
+  x-small: 2,
+  small: 3,
+  medium: 4,
+  large: 5,
+  x-large: 8,
+  xx-large: 10
+);
+
+@each $name, $index in $sizes {
+  .m--#{$name} {
+    font-size: size($index);
+  }
+}
